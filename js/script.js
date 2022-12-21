@@ -1,7 +1,14 @@
-const container = document.querySelector('.container');
-const div = document.createElement('div');
-div.setAttribute('style', 'padding:16px');
+const container = document.getElementById("container");
 
-div.textContent = 'Div 1'
+function makeRows(rows, cols) {
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  
+  for (c = 0; c < (rows * cols); c++) {
+    let cell = document.createElement("div");
+    cell.innerText = (c + 1);
+    container.appendChild(cell).className = "grid-item";
+  };
+};
 
-container.appendChild(div);
+makeRows(16, 16);
