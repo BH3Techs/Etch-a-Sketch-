@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 
+const size = prompt('Enter the grid size')
+
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -11,7 +13,7 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(16, 16);
+makeRows(size,size);
 
 const rowItems = document.querySelector('#container');
 rowItems.addEventListener('mouseover', (box) => {
@@ -19,4 +21,6 @@ rowItems.addEventListener('mouseover', (box) => {
         box.target.setAttribute('style', 'background-color:black');
     }
 });
+
+
 
