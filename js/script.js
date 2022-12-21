@@ -15,5 +15,5 @@ makeRows(16, 16);
 
 const rowItems = document.querySelector('.grid-item');
 rowItems.addEventListener('mouseover', () => {
-    alert("Ouch");
+    rowItems.setAttribute('style', 'background-color:black');
 });
