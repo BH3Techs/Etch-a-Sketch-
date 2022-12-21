@@ -13,7 +13,7 @@ body{
     grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    padding: 10px;
+    margin-left: 20px;
     border: 2px;
     border-color: blue;
     border-style: solid;
@@ -26,6 +26,10 @@ body{
     text-align: center;
 }
 .head{
+    display: flex;
+    justify-content: center;
+}
+#size{
     display: flex;
     justify-content: center;
 }
