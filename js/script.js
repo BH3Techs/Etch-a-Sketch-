@@ -13,7 +13,10 @@ function makeRows(rows, cols) {
 
 makeRows(16, 16);
 
-const rowItems = document.querySelector('.grid-item');
-rowItems.addEventListener('mouseover', () => {
-    rowItems.setAttribute('style', 'background-color:black');
+const rowItems = document.querySelector('#container');
+rowItems.addEventListener('mouseover', (box) => {
+    if(box.target.matches('.grid-item')){
+        box.target.setAttribute('style', 'background-color:black');
+    }
 });
+
