@@ -1,6 +1,6 @@
 const container = document.getElementById("container");
 
-const size = prompt('Enter the grid size')
+let size;
 
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
@@ -13,13 +13,19 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(size,size);
+makeRows(8,8);
 
 const rowItems = document.querySelector('#container');
 rowItems.addEventListener('mouseover', (box) => {
     if(box.target.matches('.grid-item')){
         box.target.setAttribute('style', 'background-color:black');
     }
+});
+
+const button = document.getElementById('size');
+button.addEventListener('click',() =>{
+    size = prompt('Enter the grid size');
+    makeRows(size,size);
 });
 
 
