@@ -1,3 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+}
+.main{
+    display: flex;
+    justify-content: center;  
+    align-content: center;
+}
 #container {
     display: grid;
     grid-gap: 1em;
@@ -5,9 +15,12 @@
     grid-template-columns: repeat(var(--grid-cols), 1fr);
   }
 
-  .grid-item {
+.grid-item {
     padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
-  }
-
+}
+.head{
+    display: flex;
+    justify-content: center;
+}

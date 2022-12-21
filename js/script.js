@@ -13,7 +13,7 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(8,8);
+makeRows(2,2);
 
 const rowItems = document.querySelector('#container');
 rowItems.addEventListener('mouseover', (box) => {
